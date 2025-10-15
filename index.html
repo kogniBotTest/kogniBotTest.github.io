@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot z pomiarem czasu reakcji</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #chat-container { max-width: 500px; margin: 20px auto; padding: 10px; border: 1px solid #ddd; }
+        #chat-box { height: 300px; overflow-y: auto; border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; }
+        #user-input { width: 100%; padding: 8px; }
+        button { padding: 8px 12px; margin-top: 5px; margin-right: 5px; }
+        label { font-weight: bold; }
+        .tone-options { display: flex; gap: 15px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+
+<div id="chat-container">
+    <h3>Chatbot_test_2</h3>
+
+    <label for="participant-id">ID uczestnika:</label>
+    <input type="text" id="participant-id" placeholder="Wprowadź ID uczestnika" />
+    <br><br>
+
+    <!-- Wybór stylu chatbota -->
+    <label>Styl wypowiedzi chatbota:</label>
+    <div class="tone-options">
+        <label><input type="radio" name="tone" value="życzliwy" checked> Życzliwy</label>
+        <label><input type="radio" name="tone" value="profesjonalny"> Profesjonalny</label>
+        <label><input type="radio" name="tone" value="swobodny"> Swobodny</label>
+    </div>
+
+    <div id="chat-box"></div>
+
+    <input type="text" id="user-input" placeholder="Napisz wiadomość..." />
+    <div>
+        <button onclick="sendMessage()">Wyślij</button>
+        <button onclick="showLogs()">Pokaż log w konsoli</button>
+    </div>
+</div>
+
+<script src="chatbot.js"></script>
+
+</body>
+</html>
