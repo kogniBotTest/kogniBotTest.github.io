@@ -3,7 +3,7 @@ const chatLogs = [];
 let lastBotTimestamp = null;
 
 // Wstaw tutaj swój klucz API do OpenAI
-const OPENAI_API_KEY = "YOUR_OPENAI_API_KEY";
+const OPENAI_API_KEY = "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";
 
 async function sendMessage() {
     const participantId = document.getElementById('participant-id').value.trim();
